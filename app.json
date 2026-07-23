@@ -1,0 +1,39 @@
+{
+  "expo": {
+    "name": "VYTAL House",
+    "slug": "vytal-house",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "scheme": "vytalhouse",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "resizeMode": "contain",
+      "backgroundColor": "#090B0E"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.vytalhouse.experience"
+    },
+    "android": {
+      "package": "com.vytalhouse.experience"
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "name": "VYTAL House — Recharge. Recover. Evolve.",
+      "shortName": "VYTAL House",
+      "lang": "en"
+    },
+    "plugins": [
+      "expo-router"
+    ],
+    "experiments": {
+      "typedRoutes": true,
+      "baseUrl": "/vytalhouserecess"
+    },
+    "extra": {
+      "brand": "VYTAL House",
+      "contactEmail": "Info@VYTALHouse.com"
+    }
+  }
+}

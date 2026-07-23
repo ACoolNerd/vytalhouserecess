@@ -1,0 +1,10 @@
+{
+  "name": "VYTAL House — Recharge. Recover. Evolve.",
+  "short_name": "VYTAL House",
+  "description": "A premium wellness and recovery house in development for Howard County, Maryland.",
+  "start_url": "/vytalhouserecess/",
+  "scope": "/vytalhouserecess/",
+  "display": "standalone",
+  "background_color": "#090B0E",
+  "theme_color": "#090B0E"
+}
