@@ -18,6 +18,7 @@ const nav: { label: string; href: Href }[] = [
   { label: 'Services', href: '/services' },
   { label: 'Memberships', href: '/memberships' },
   { label: 'The House', href: '/facility' },
+  { label: 'Floor Plan', href: '/floor-plan' },
   { label: 'Contact', href: '/contact' }
 ];
 
@@ -25,13 +26,13 @@ export function SiteShell({ children }: PropsWithChildren) {
   const pathname = usePathname();
   const { width } = useWindowDimensions();
   const [menuOpen, setMenuOpen] = useState(false);
-  const desktop = width >= 920;
+  const desktop = width >= 1020;
   const currentYear = useMemo(() => new Date().getFullYear(), []);
 
   return (
     <SafeAreaView style={styles.safe} edges={['top']}>
       <View style={styles.announcement}>
-        <Text style={styles.announcementText}>HOWARD COUNTY FLAGSHIP IN DEVELOPMENT · FOUNDING INTEREST LIST OPEN</Text>
+        <Text style={styles.announcementText}>HOWARD COUNTY FLAGSHIP IN DEVELOPMENT · COMPLETE 5,760 SF CONCEPT NOW AVAILABLE</Text>
       </View>
       <View style={styles.header}>
         <View style={styles.headerInner}>
@@ -117,7 +118,7 @@ export function SiteShell({ children }: PropsWithChildren) {
             </View>
             <View style={styles.footerBottom}>
               <Text style={styles.copyright}>© {currentYear} VYTAL House. All rights reserved.</Text>
-              <Text style={styles.copyright}>Services, pricing, location, providers, and opening timing remain subject to final approval.</Text>
+              <Text style={styles.copyright}>Floor plan, services, pricing, location, providers, and opening timing remain subject to professional validation and final approval.</Text>
             </View>
           </View>
         </View>
@@ -176,17 +177,17 @@ const styles = StyleSheet.create({
   },
   brandName: { color: colors.ivory, fontSize: 16, fontWeight: '700', letterSpacing: 2.2 },
   brandLine: { color: colors.muted, fontSize: 8, letterSpacing: 1.35, marginTop: 3 },
-  desktopNav: { flexDirection: 'row', alignItems: 'center', gap: 22 },
+  desktopNav: { flexDirection: 'row', alignItems: 'center', gap: 17 },
   navLinkWrap: { paddingVertical: 12 },
-  navLink: { color: colors.muted, fontSize: 12, fontWeight: '600', letterSpacing: 1.1 },
+  navLink: { color: colors.muted, fontSize: 11, fontWeight: '600', letterSpacing: 1.05 },
   navLinkActive: { color: colors.ivory },
   primaryButton: {
     backgroundColor: colors.gold,
-    paddingHorizontal: 20,
+    paddingHorizontal: 18,
     paddingVertical: 13,
     borderRadius: 999
   },
-  primaryButtonText: { color: colors.ink, fontSize: 11, fontWeight: '800', letterSpacing: 1.25 },
+  primaryButtonText: { color: colors.ink, fontSize: 10, fontWeight: '800', letterSpacing: 1.2 },
   menuButton: { borderWidth: 1, borderColor: colors.line, borderRadius: 999, paddingHorizontal: 16, paddingVertical: 11 },
   menuButtonText: { color: colors.ivory, fontSize: 11, fontWeight: '700', letterSpacing: 1.5 },
   mobileNav: { borderTopWidth: 1, borderTopColor: colors.line, paddingHorizontal: layout.pagePadding, paddingVertical: 10 },
