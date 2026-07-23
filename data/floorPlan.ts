@@ -5,7 +5,7 @@ export type FloorPlanZone = {
   description: string;
 };
 
-export const floorPlanZones: FloorPlanZone[] = [
+export const floorPlanZones: [FloorPlanZone, ...FloorPlanZone[]] = [
   { number: 1, name: 'Welcome Lobby & Lounge', lane: 'Arrival', description: 'Primary arrival, orientation, waiting, and member decompression point.' },
   { number: 2, name: 'Member Concierge', lane: 'Arrival', description: 'Central check-in, scheduling, membership support, and wayfinding desk.' },
   { number: 3, name: 'Wellness Lounge', lane: 'Hospitality', description: 'Quiet member seating and recovery transition space.' },
